@@ -18,10 +18,34 @@ const student5 = new Student(5, "Nguyen Van E", 20,[3,1,7]);
 //tao mang gom 5 sinh vien vua dc khoi tao
 const studentList = [student1, student2, student3, student4, student5];
 
+//ham tinh diem trung binh
+const getAverage = (scores) => {
+    return scores.reduce((sum, score) => sum + score, 0) / scores.length;
+}
+
 //ham tim kiem sinh vien theo id
 const getStudentById = (studentList, id) => {
     const findStudent = studentList.find((student) => student.id == id);
     return findStudent;
+}
+
+//ham lay sinh vien co diem trung binh cao nhat
+const topStudent = (studentList) => {
+    let highestAvg = Math.max(...studentList.map(s => getAverage(s.scores)));
+    return studentList.filter(s => getAverage(s.scores) === highestAvg);
+}
+
+//ham tinh diem trung binh ca lop
+const classAvg = (studentList) => {
+    let total = studentList.reduce((sum, s) => sum + getAverage(s.scores),0);
+    return total / studentList.length;
+}
+
+//ham loc sinh vien theo diem trung binh
+
+//ham sap xep theo ten
+const sortStudent = (studentList) => {
+    return [...studentList].sort((a,b) => a.name.localeCompare(b.name));
 }
 
 //goi cac ham
@@ -31,3 +55,11 @@ if(!resultFind){
 } else {
     console.log("Tim thay sinh vien: ", resultFind);
 }
+console.log("\nSinh vien co diem trung binh cao nhat: ");
+console.log(topStudent(studentList));
+
+console.log("\nDiem trung binh cua ca lop: ");
+console.log(classAvg(studentList));
+
+console.log("\nDanh sach sinh vien: ");
+console.log(sortStudent(studentList));
