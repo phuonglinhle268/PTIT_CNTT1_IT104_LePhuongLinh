@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = 5;
+        const arr = [1,2,3];
+
+        //thay doi thu gtri bien a
+        a = 8;
+        //them phan tu moi vao mang khai bao
+        arr.push(4);
+
+        console.log(a);
+        console.log(arr);
+
+        //->ket qua; gay ra loi: TypeError: Assignment to constant variable.(gan cho bien khong doi)
+        //viec thay doi gia tri bien a gay ra loi, them phan tu moi khong co loi
+        //gthich:
+        //const khong the thay doi gia tri bien da khai bao sau khi gan gia tri ban dau, 
+        // nhung van co the thay doi noi dung ben trong
+    </script>
+    
+</body>
+</html>

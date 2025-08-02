@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //slice: sao chep 1 ptu ma ko lam thay doi chuoi/mang goc
+        const insert = (arr1, arr2, pos) => {
+            if (pos < 0 || pos > arr1.length){
+                console.log("Vi tri khong hop le");
+                return;
+            }
+            const result = [...arr1.slice(0,pos), ...arr2, ...arr1.slice(pos)];
+            //cat tu dau->pos-1, chen 2, con lai sau pos
+            console.log(result);
+        };
+        insert([1,2,3,7,8], [4,5,6], 3);
+        insert(['a', 'b', 'e', 'f'], ['c', 'd'], 2);
+    </script>
+</body>
+</html>

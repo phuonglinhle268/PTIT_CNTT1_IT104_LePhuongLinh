@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //tham so ko xdinh: dung rest parameter
+        const total = (...arrays)  => { //gom tat ca vao 1 mang
+            //map: lap qua tung mang con, tra ve mang moi
+            //reduce: cong don cac ptu trong mang
+            //0: gtri khoi tao
+            return arrays.map(arr => arr.reduce((sum, number) => sum + number, 0));
+        };
+        console.log(total([1, 2], [6,7,8], [12,8]));
+    </script>
+</body>
+</html>
