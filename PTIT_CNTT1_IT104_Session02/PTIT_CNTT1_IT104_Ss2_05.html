@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let phoneBooks = [];
+        const addContact = (name, phone, email) => {
+            const contact = {
+                name, 
+                phone,
+                email,
+            };
+            phoneBooks.push(contact);
+            
+        }
+        const displayContact = () => {
+            if (phoneBooks.length === 0){
+                console.log("Chua co lien he trong danh ba");
+            } else {
+                phoneBooks.forEach((contact) => {
+                    console.log(`Name: ${contact.name}, Phone: ${contact.phone}, Email: ${contact.email}`);
+                });
+            }
+        }
+        addContact("Nguyen Van A", "12345", "nguyenvana@gmail.com");
+        addContact("Nguyen Van B", "678910", "nguyenvanb@gmail.com");
+        displayContact();
+    </script>
+</body>
+</html>

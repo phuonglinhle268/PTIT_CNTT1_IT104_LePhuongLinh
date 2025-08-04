@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const products = [
+            { name: "A", price: 100, discount: 0.1, quantity: 2, bulkDiscount: { minQuantity: 2, extraDiscount: 0.05 } },
+            { name: "B", price: 200, discount: 0.2, quantity: 1 },
+            { name: "C", price: 300, discount: 0.2, quantity: 3, bulkDiscount: { minQuantity: 3, extraDiscount: 0.1 } },
+        ];
+
+        const getOrderSummary = (products) => {
+            const beforeDiscount = products.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            const { afterDiscount, details } = products.reduce(
+                (acc, item) => {
+                    let finalPrice = item.price * (1 - (item.discount || 0));
+                    if (item.bulkDiscount && item.quantity >= item.bulkDiscount.minQuantity) {
+                        finalPrice *= (1 - item.bulkDiscount.extraDiscount);
+                    }
+                    const subtotal = Math.round(finalPrice * item.quantity);
+
+                    return {
+                        afterDiscount: acc.afterDiscount + finalPrice * item.quantity,
+                        details: [...acc.details, { name: item.name, finalPrice: Math.round(finalPrice), quantity: item.quantity, subtotal }],
+                    };
+                },
+                { afterDiscount: 0, details: [] }
+            );
+
+            return {
+                beforeDiscount,
+                afterDiscount: Math.round(afterDiscount),
+                details,
+            };
+        };
+        console.log(getOrderSummary(products));
+    </script>
+</body>
+
+</html>

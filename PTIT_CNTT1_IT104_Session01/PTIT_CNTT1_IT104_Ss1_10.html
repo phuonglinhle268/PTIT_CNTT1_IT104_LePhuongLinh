@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //so sanh cac ptu sau khi sap xep va gom thanh 1  mang
+
+        const groupArray = (array) => {
+            //tao doi tuong chua cac tu giong nhau
+            const groupWords = {};
+            //duyet mang ban dau
+            for (const word of array){
+                //trong vong lap tien hanh chuyen doi tung ptu (dang chuoi) thanh mang
+                const convertStringToArray = word.split("");
+
+                 //sap xep lai mang theo thu tu
+                const wordSorted = convertStringToArray.sort();
+
+                //chuyen doi thanh chuoi
+                const convertArrayToString = wordSorted.join();
+
+                if (!groupWords[convertArrayToString]) {
+                    groupWords[convertArrayToString] = [];
+                }
+                groupWords[convertArrayToString].push(word);
+
+                return Object.values(groupWords);
+            }
+        };
+
+        const array = ["eat", "tea", "tan", "ate", "nat", "bat"];
+
+        groupArray(array);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const getStudentSummary = (student) => {
+            const {
+                name,
+                age,
+                listMonHoc,
+            } = student;
+            const total = listMonHoc.reduce((sum, subject) => sum + subject.score, 0);
+            const average = +(total / listMonHoc.length);
+
+            let rankStudent = "";
+            if (average >= 8.5) {
+                rankStudent = "Hoc sinh gioi";
+            } else if (average >= 7) {
+                rankStudent = "Hoc sinh kha";
+            } else if (average >= 5) {
+                rankStudent = "Hoc sinh trung binh";
+            } else {
+                rankStudent = "Hoc sinh yeu";
+            }
+            const sortSubject = [...listMonHoc].sort((a, b) => b.score - a.score);
+            const bestSubject = sortSubject[0].subject;
+            const weakestSubject = sortSubject[sortSubject.length - 1].subject;
+
+            return `${name} is ${age} tuoi.\n
+            Average score: ${average} -> ${rankStudent}.\n
+            Best subject: ${bestSubject}\n
+            Weakest subject: ${weakestSubject}`;
+        };
+        const student = {
+            name: "Dev",
+            age: 20,
+            listMonHoc: [
+                { subject: "Math", score: 9 },
+                { subject: "English", score: 7.5 },
+                { subject: "Physics", score: 6 },
+                { subject: "Literature", score: 8.5 }
+            ]
+        };
+        console.log(getStudentSummary(student));
+    </script>
+</body>
+
+</html>
