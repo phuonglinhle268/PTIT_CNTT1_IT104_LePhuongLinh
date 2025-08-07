@@ -1,8 +1,8 @@
 "use strict";
 let isGreeting = true;
-
 if (isGreeting) {
     console.log("Xin chao");
-} else {
+}
+else {
     console.log("Tam biet");
 }
