@@ -27,6 +27,8 @@ class Account {
         this.history.forEach((h, i) => {
             console.log(`${i + 1}. ${h}`);
         });
+        // h: giá trị của phần tử hiện tại (ở đây là chuỗi mô tả giao dịch).
+        // i: chỉ số của phần tử (bắt đầu từ 0).
     }
 }
 class SavingAccount extends Account {
