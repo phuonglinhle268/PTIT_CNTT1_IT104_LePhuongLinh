@@ -324,7 +324,7 @@ function runAirlineManager() {
                     console.error("Số hiệu chuyến bay không hợp lệ!");
                 }
                 break;
-            case 11: // Thoát
+            case 11:
                 alert("Tạm biệt!");
                 break;
         }

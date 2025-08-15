@@ -369,7 +369,7 @@ function runAirlineManager(){
         }
         break;
 
-      case 11: // Thoát
+      case 11: 
         alert("Tạm biệt!");
         break;
     }

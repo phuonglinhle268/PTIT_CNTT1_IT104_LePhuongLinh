@@ -202,7 +202,6 @@ do {
   `));
     switch (choice) {
         case 1:
-            // id: Mã khách hàng (số nguyên, tự động tăng). name: Tên khách hàng (chuỗi).  email: Email (chuỗi). shippingAddress: Địa chỉ giao hàng (chuỗi).
             const newName = String(prompt("Nhập tên khách khàng: "));
             const newEmail = String(prompt("Nhập email khách hàng: "));
             const newAddress = String(prompt("Nhập địa chỉ: "));
