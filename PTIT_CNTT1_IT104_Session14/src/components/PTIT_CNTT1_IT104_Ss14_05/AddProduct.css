@@ -1,0 +1,43 @@
+.container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+.container h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 15px;
+}
+
+.info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info input, .info select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn{
+    width: 100%;
+    padding: 10px;
+    background-color: skyblue;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
