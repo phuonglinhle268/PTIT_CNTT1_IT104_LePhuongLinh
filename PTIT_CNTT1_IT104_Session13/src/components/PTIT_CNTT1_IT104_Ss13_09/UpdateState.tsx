@@ -1,16 +1,24 @@
-import React, {useState} from 'react'
+import React from "react";
+
+let company = "Rikkei Academy";
 
 const UpdateState = () => {
-    const [company, setCompany] = useState("Rikkei Academy");
-    const handleChange = () => {
-        setCompany("Rikkei Soft");
-    };
-  return (
-    <div style={{textAlign: 'center', border: "1px solid black"}}>
-        <h3>Ten cong ty: {company}</h3>
-        <button style={{border: "1px solid black", borderRadius: "5px"}} onClick={handleChange}>Change</button>
-    </div>
-  )
-}
+  const handleChange = () => {
+    company = "Rikkei Soft";
+    console.log(company);
+  };
 
-export default UpdateState
+  return (
+    <div style={{ textAlign: "center", border: "1px solid black" }}>
+      <h3>Tên công ty: {company}</h3>
+      <button
+        style={{ border: "1px solid black", borderRadius: "5px" }}
+        onClick={handleChange}
+      >
+        Change
+      </button>
+    </div>
+  );
+};
+
+export default UpdateState;
