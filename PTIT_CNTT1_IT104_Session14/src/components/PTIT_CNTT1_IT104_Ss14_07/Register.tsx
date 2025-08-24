@@ -13,15 +13,18 @@ export default class Register extends Component {
         formData:{ studentName: '', email: '', password: '', phone: '' },
         success: false,
     };
-
+//focus vao o ten sinh vien sau khi dc render
     componentDidMount() {
         const studentNameInput = document.querySelector('input[name="studentName"]') as HTMLInputElement;
+        //Tìm phần tử input có thuộc tính name="studentName" trong DOM và ép kiểu thành HTMLInputElement.
         if (studentNameInput) studentNameInput.focus();
+        //Nếu tìm thấy phần tử input, tự động đặt con trỏ (focus) vào ô nhập tên sinh viên khi component được tải.
     }
-
+//kiểu generic: event là 1 sự kiện that đổi trên 1 ptu input
     handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
+        const { name, value } = event.target; //lấy từ ptu input gây ra sự kiện
         this.setState((prevState) => ({
+            //sao chép fformData cũ và cập nhật gtri t.ung name=value
             formData: { ...prevState.formData, [name]: value },  //dang sai
         }));
     };
@@ -31,14 +34,17 @@ export default class Register extends Component {
         const { studentName, email } = this.state.formData;
 
         if (!studentName.trim() || !email.trim()) {
+            //loại bỏ khoảng trắng ở đầu và cuối 1 chuỗi
             alert('Ten sinh vien va email khong de trong');
             return;
         }
 
         // Luu vào localStorage
         const userData = { ...this.state.formData, timestamp: new Date().toISOString() };
+        // Date.toISOString: chuyen 1 doi tuong tgian thanh 1 chuoi theo tieu chuan ISO(y/m/d)
         const existingData = JSON.parse(localStorage.getItem('users') || '[]');
         localStorage.setItem('users', JSON.stringify([...existingData, userData]));
+        //stringify: chuyển đổi 1 gtri thành 1 chuỗi
         this.setState({
             formData: { studentName: '', email: '', password: '', phone: '' },
             success: true,

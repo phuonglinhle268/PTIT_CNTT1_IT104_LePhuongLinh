@@ -1,0 +1,26 @@
+Lifecycle method
+
+4 giai đoạn
+-Khởi tạo
+
+-> 3 giai đoạn chính
+-Mounting (gắn gtri vao DOM)
+->componentDidMount():  
++ gọi sau khi component đc render lên DOM
++ đc mount lần đầu tiên
++ gọi API, thêm eventListener, bắt đầu timer
+
+-Updating
+-> shouldComponentUpdate(nextProps, nextState)
++Tối ưu hiệu năng khi muốn ngăn render 1 trang
++ render lại -> mặc định return true
+
+-> componentDidUpdate(prevProps, prevState)
++ sau khi component cập nhật xong
++ ss props/state mới với cũ
+
+-Unmounting (gỡ khỏi DOM, dọn dẹp tài nguyên)
+-> componentWillUnmount()
++ gọi trc khi component bị xóa khỏi DOM
+
+
