@@ -1,0 +1,19 @@
+.subject {
+    background-color: rgb(68, 60, 60);
+    padding: 26px;
+    color: white;
+}
+li {
+    color:grey;
+    background-color: rgb(184, 248, 253);
+    list-style: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+ul {
+    display : flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-items: center;
+    margin-right: 30px;
+}

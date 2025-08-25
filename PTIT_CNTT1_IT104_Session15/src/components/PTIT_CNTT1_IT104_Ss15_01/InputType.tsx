@@ -13,6 +13,7 @@ export default class InputType extends Component<object, Form> {
       isSubmit: false,
     };
   }
+  
   handleClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ email: event.target.value });
   };

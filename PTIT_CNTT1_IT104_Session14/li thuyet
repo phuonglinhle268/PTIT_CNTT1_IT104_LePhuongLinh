@@ -23,4 +23,16 @@ Lifecycle method
 -> componentWillUnmount()
 + gọi trc khi component bị xóa khỏi DOM
 
+event: React.ChangeEvent<HTMLInputElement>  va cac kieu khac
+-> generic type, khai bao kieu du lieu tham so
 
+Type annotation = cách khai báo kiểu dữ liệu cho biến / tham số / giá trị trả về.
+->onClick, onChange, onSubmit...
+
+setInterval
+-> Lặp lại việc thực thi một đoạn code theo chu kỳ thời gian cố định (tính bằng mili giây).
+-> Chạy lặp đi lặp lại sau mỗi khoảng thời gian đã định, cho đến khi gọi clearInterval
+
+setTimeout
+-> Chỉ chạy 1 lần sau khoảng thời gian đã định.
+-> goi nhu nao chay nhu the 1 lan duy nhat

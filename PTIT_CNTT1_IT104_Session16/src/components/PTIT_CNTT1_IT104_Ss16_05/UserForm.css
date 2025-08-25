@@ -1,0 +1,22 @@
+.btn {
+    margin-top: 20px;
+    background-color: #1976d2;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+.info{
+    background-color: azure;
+    margin: 20px;
+    padding: 26px;
+    border-radius: 8px;
+}
+.user {
+    background-color: rgb(185, 228, 246);
+    color: whitesmoke;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px;
+}

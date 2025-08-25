@@ -13,8 +13,9 @@ export default class Clock extends Component<object, StateType> {
     }
     componentDidMount() {
         this.intervalId = setInterval(() => {
+            //moi lan chay cap nhat state.time thanh tgian moi
             this.setState({time: new Date()});
-        }, 1000);
+        }, 1000);  //1000ms = 1s
     }
     componentWillUnmount(){
         if(this.intervalId){
