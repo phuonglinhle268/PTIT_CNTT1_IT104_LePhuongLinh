@@ -1,0 +1,17 @@
+.container {
+  height: 30vh;
+  justify-content: center;
+  align-items: center;
+  background: gainsboro;
+  margin-top: 30px;
+}
+
+.key {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  
+}

@@ -1,0 +1,40 @@
+.scroll-container {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin-top: 30px;
+}
+
+.header {
+  background: #007bff;
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.header button {
+  background: white;
+  color: #007bff;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+
+
+.text {
+  height: 800px; 
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+.section {
+  padding: 60px;
+  background: #ffeeba;
+  text-align: center;
+}

@@ -1,0 +1,101 @@
+import { useEffect } from "react"
+
+*useState
+-> khai báo, qly state 
+-> trc đây chỉ class có state (dùng this.state)
+
+-> const [state, setState] = useState(initialValue);
+- state: biến lưu giá trị hiện tại của state.
+- setState: hàm để thay đổi giá trị state. 
+<-> Mỗi lần gọi setState thì component sẽ re-render.
+- initialValue: giá trị khởi tạo ban đầu của state.
+
+
+*useEffect
+-> xử lí side effect
+- Gọi API lấy dữ liệu.
+- Tương tác với DOM.
+- Thiết lập/cleanup sự kiện (event listener, timer...)
+
+-> useEffect(() => {
+  // code effect
+  return () => {
+    // cleanup (tùy chọn)
+  };
+}, [dependencies]);
+- () => {}: hàm chạy sau khi component render.
+- return () => {}: cleanup function, chạy trước khi component unmount hoặc trước khi chạy lại effect.
+- [dependencies]: mảng phụ thuộc. Khi giá trị trong mảng thay đổi → effect chạy lại.
+
+
+*useRef
+-> giúp tạo một “tham chiếu” (reference) có thể giữ lại giá trị xuyên suốt các lần render, mà không làm component re-render khi giá trị đó thay đổi.
+-> Nó thường được dùng để:
+- Truy cập trực tiếp đến DOM element.
+- Lưu trữ biến tạm mà không cần state.
+
+
+useReducer
+-> quản lý state phức tạp bằng mô hình (state, action)
+-> gom nhiều state con vào một “cỗ máy trạng thái” nhất quán (state machine).
+
+-> const [state, dispatch] = useReducer(reducer, initialArg)
+- reducer(state, action): pure function, trả về state mới (không mutate).
+- initialArg (initialState): dữ liệu khởi tạo (có thể là state gốc, hoặc dữ liệu thô).
+- state là trạng thái hiện tại với khởi đầu = initialState
+
+-> payload
+- payload nghĩa đen là “hàng hóa, dữ liệu mang theo” của action.
+- Nó chứa giá trị bổ sung mà reducer cần để cập nhật state.
+<-> ex: want to increase the number value except 1, payload is 5, then it'll be used increase by 5
+- Không bắt buộc, nhưng hầu như mọi action đều cần dữ liệu đi kèm.
+
+-> dispatch
+- hàm mà React cung cấp khi bạn dùng useReducer.
+- Nhiệm vụ: gửi một “action” đến reducer.
+- Mỗi khi bạn gọi dispatch(action) → React sẽ đưa action vào reducer(state, action) để tính ra state mới.
+
+👉 Có thể hình dung:
+- Bạn có một cái máy (reducer).
+- Muốn máy chạy thì bạn gửi lệnh (dispatch).
+- Máy nhận lệnh → trả về kết quả mới (state).
+
+- Ví dụ:
+dispatch({ type: "INCREASE" });
+
+->viết hàm switch-case
+const reducer = (state:kiểu dữ liệu trả về, action: hàm type khai báo ở trên): kiểu dữ liệu => {
+    switch(action.type){
+        case...(tên type khai báo trong hàm type):
+           return...;
+        default:
+           return state;
+    }
+}
+
+*React.memo
+-> phần cuối export default React.memo(component mình tạo ra)
+- dùng để ghi nhớ (memoize) một functional component.
+- Khi component cha re-render, component con được bọc trong React.memo sẽ chỉ re-render nếu props thay đổi.
+👉 Tức là, nó giúp tránh re-render không cần thiết
+
+
+*useMemo
+-> dùng để ghi nhớ (memoize) kết quả của một hàm tính toán.
+-> chỉ cần gọi hook ở trên
+
+
+*useCallback
+- dùng để ghi nhớ (memoize) một hàm callback.
+- đảm bảo rằng một hàm không bị tạo lại mỗi lần component render, trừ khi dependencies (phụ thuộc) của nó thay đổi.
+👉 Cú pháp:
+
+const memoizedCallback = useCallback(
+  () => {
+    // logic trong hàm
+  },
+  [dependencies] // mảng phụ thuộc
+);
+
+-> memoizedCallback chính là hàm đã được "ghi nhớ".
+-> [dependencies] quyết định khi nào cần tạo lại hàm.
