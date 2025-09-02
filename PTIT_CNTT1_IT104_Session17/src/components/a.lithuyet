@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+các giá trị khởi tạo chỉ sử dụng 1 lần
 
 *useState
 -> khai báo, qly state 
@@ -9,6 +9,9 @@ import { useEffect } from "react"
 - setState: hàm để thay đổi giá trị state. 
 <-> Mỗi lần gọi setState thì component sẽ re-render.
 - initialValue: giá trị khởi tạo ban đầu của state.
+
+dựa vào 2 cơ chế chính:
+- bất đồng bộ
 
 
 *useEffect
@@ -99,3 +102,7 @@ const memoizedCallback = useCallback(
 
 -> memoizedCallback chính là hàm đã được "ghi nhớ".
 -> [dependencies] quyết định khi nào cần tạo lại hàm.
+
+=> 
+useCallback(fn, [deps]): Trả về hàm đã được ghi nhớ (memoized), chỉ tạo lại khi deps thay đổi.
+useMemo(fn, [deps]): Trả về giá trị đã được ghi nhớ, chỉ tính toán lại khi deps thay đổi.
