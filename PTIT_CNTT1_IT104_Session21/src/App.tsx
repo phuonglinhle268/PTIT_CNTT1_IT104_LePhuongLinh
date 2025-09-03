@@ -17,6 +17,7 @@ function App() {
         Submit
       </div>
 
+      
       <div className="relative w-60 h-40 bg-sky-200 rounded-[5px] p-4 mt-8 ml-3">
         <h2 className="text-black">Relative parent</h2>
 
@@ -67,15 +68,15 @@ function App() {
 
 
       <div class="flex flex-wrap gap-3 mt-6 mb-8">
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">1</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">2</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">3</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">4</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">5</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">6</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">7</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">8</div>
-  <div class="flex-1 basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">9</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">1</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">2</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">3</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">4</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">5</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">6</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">7</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">8</div>
+  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">9</div>
 </div>
 
 <h2>BAI 8</h2>
@@ -95,15 +96,18 @@ function App() {
   <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div>
 </div>
 
+
 <div class="flex justify-between p-3">
    <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
   <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
 
+
 <div class="flex justify-around p-3">
    <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
   <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+
 
 <div class="flex justify-evenly p-3">
    <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
