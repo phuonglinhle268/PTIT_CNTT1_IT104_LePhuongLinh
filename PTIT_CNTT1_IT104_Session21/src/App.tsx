@@ -67,52 +67,52 @@ function App() {
       </div>
 
 
-      <div class="flex flex-wrap gap-3 mt-6 mb-8">
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">1</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">2</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">3</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">4</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">5</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">6</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">7</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">8</div>
-  <div class="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">9</div>
+      <div className="flex flex-wrap gap-3 mt-6 mb-8">
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">1</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">2</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">3</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">4</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">5</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">6</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">7</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">8</div>
+  <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">9</div>
 </div>
 
 <h2>BAI 8</h2>
-<div class="flex justify-start gap-3">
-   <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+<div className="flex justify-start gap-3">
+   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
 
-<div class="flex justify-end gap-3 p-3">
-   <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+<div className="flex justify-end gap-3 p-3">
+   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
 
-<div class="flex justify-center gap-3 p-3">
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div>
+<div className="flex justify-center gap-3 p-3">
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div>
 </div>
 
 
-<div class="flex justify-between p-3">
-   <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+<div className="flex justify-between p-3">
+   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
 
 
-<div class="flex justify-around p-3">
-   <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+<div className="flex justify-around p-3">
+   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
 
 
-<div class="flex justify-evenly p-3">
-   <div class="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div class="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+<div className="flex justify-evenly p-3">
+   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
 
 
 
