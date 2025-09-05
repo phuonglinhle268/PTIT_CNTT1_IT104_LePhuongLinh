@@ -16,7 +16,15 @@ function App() {
       <div className="rounded-3xl text-red bg-[#0ea5e9] hover:bg-[#0369a1] h-[40px] w-[160px] text-center mt-4">
         Submit
       </div>
+{/* 
+ptu được đặt relative -> vẫn chiếm chỗ trong layout bình thường.
+có thể dịch chuyển nó bằng các thuộc tính: top, left, right, bottom.
+Nếu bạn không dịch chuyển thì nó giống hệt như static (mặc định).
+khi có một phần tử con absolute -> ptu relative sẽ trở thành mốc tham chiếu */}
 
+{/* ptu được đặt absolute -> thoát khỏi luồng bình thường (không chiếm chỗ nữa).
+định vị theo phần tử cha gần nhất 
+Nếu không có cha -> sẽ bám vào viewport (toàn bộ màn hình). */}
       
       <div className="relative w-60 h-40 bg-sky-200 rounded-[5px] p-4 mt-8 ml-3">
         <h2 className="text-black">Relative parent</h2>
@@ -66,6 +74,18 @@ function App() {
         </p>
       </div>
 
+{/* 
+basis: kích thước khởi đầu của item trong flex
+chia layout dua tren ko gian con thua hay thieu */}
+
+{/* 
+*flex-nowrap
+mặc định -> nằm trên 1 hàng/cot, không được xuống dòng, kể cả khi container bị chật.
+-> ptu sẽ thu nhỏ lại để nhét vừa một hàng, hoặc tràn ra ngoài nếu không thể co thêm. 
+
+*flex-wrap
+ptu tự động xuống dòng khi không còn đủ chỗ trong container.
+*/}
 
       <div className="flex flex-wrap gap-3 mt-6 mb-8">
   <div className="basis-[30%] bg-purple-500 text-white text-center py-6 rounded-[10px]">1</div>
@@ -80,35 +100,49 @@ function App() {
 </div>
 
 <h2>BAI 8</h2>
+{/* phan tu nam ben trai */}
 <div className="flex justify-start gap-3">
    <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
 
+{/* phan tu nam ben phai */}
 <div className="flex justify-end gap-3 p-3">
    <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div>
+  </div>
 
+{/* phan tu nam giua */}
 <div className="flex justify-center gap-3 p-3">
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div>
 </div>
 
+{/* phan tu nam gian ra 2 ben
+gian cach deu, 2 ptu ngoai cung sat mep, ko co khoang trong ngoai cung
+ */}
 
 <div className="flex justify-between p-3">
-   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div>
+  </div>
 
-
+{/* phan tu nam gian deu 2 ben
+cac ptu gian deu, co khoang trong ngoai cung
+khoang ngoai cung bang 1/2 khoang cach giua cac ptu
+ */}
 <div className="flex justify-around p-3">
-   <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
-  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div></div>
+  <div className="p-3 bg-blue-500 text-white rounded-[5px]">03</div>
+  </div>
 
-
+{/* phan tu nam giua deu
+cac ptu cach deu nhau, ke ca 2 ben le, tat ca khoang cach bang nhau hoan toan
+ */}
 <div className="flex justify-evenly p-3">
    <div className="p-3 bg-blue-500 text-white rounded-[5px]">01</div>
   <div className="p-3 bg-blue-500 text-white rounded-[5px]">02</div>
