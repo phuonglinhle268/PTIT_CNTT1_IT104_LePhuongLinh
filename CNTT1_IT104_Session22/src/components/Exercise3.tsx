@@ -10,8 +10,7 @@ export default function Exercise3() {
         <Card.Body>
           <Card.Title>MacBook Air 2018</Card.Title>
           <Card.Text>
-            The reason I am selling the machine is because it is too much power
-            for what I need
+            The reason I am selling the machine is because it is too much power for what I need
           </Card.Text>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <Button variant="primary">Xem chi tiết</Button>
@@ -26,8 +25,7 @@ export default function Exercise3() {
         <Card.Body>
           <Card.Title>MacBook Pro 2019</Card.Title>
           <Card.Text>
-            The reason I am selling the machine is because it is too much power
-            for what I need.
+            The reason I am selling the machine is because it is too much power for what I need.
           </Card.Text>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <Button variant="primary">Xem chi tiết</Button>

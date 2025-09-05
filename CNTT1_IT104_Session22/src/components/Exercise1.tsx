@@ -9,7 +9,7 @@ export default function Exercise1() {
       <Button variant="warning">Cảnh báo</Button>
       <Button variant="danger">Báo lỗi</Button>
       <Button variant="info">Thông tin</Button>
-      <Button variant="link">Đường dẫn</Button>
+      <Button variant="link">Link</Button>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Table, Button, Input, Select, Tag, Modal, Form,} from 'antd';
+import { Table, Button, Input, Select, Tag, Modal, Form, Pagination,} from 'antd';
 
 
 
@@ -144,7 +144,15 @@ export default function ProductManager() {
 
       <div style={{ textAlign: 'right', marginTop: 20 }}>
         <span style={{ marginRight: 10 }}>Tổng: {products.length} sản phẩm</span>
-        
+         <Pagination
+          current={1}
+          total={products.length}
+          pageSize={3}
+          showSizeChanger
+          pageSizeOptions={['3', '5', '7']}
+          style={{ display: 'inline-block' }}
+        />
+        <span style={{ marginLeft: 10 }}></span>
       </div>
 
       <Modal

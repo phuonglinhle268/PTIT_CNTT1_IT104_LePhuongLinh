@@ -14,7 +14,7 @@ export default function Exercise5() {
           dismissible    //nút X để đóng
           onClose={() => setSuccess(false)}
         >
-          Thêm tài khoản thành công.
+          Thêm tài khoản thành công
         </Alert>
       )}
 
@@ -24,7 +24,7 @@ export default function Exercise5() {
           dismissible
           onClose={() => setError(false)}
         >
-          Thêm mới tài khoản thất bại.
+          Thêm mới tài khoản thất bại
         </Alert>
       )}
 
