@@ -26,7 +26,7 @@ function TaskManager() {
   const handleAddTask = () => {
     setError("");
     if (!newTask.trim()) {
-      setError("Tên công việc không được để trống!");
+      setError("Tên công việc không được để trống");
       return;
     }
     if (tasks.some((task) => task.name.toLowerCase() === newTask.trim().toLowerCase())) {
@@ -83,7 +83,6 @@ function TaskManager() {
 
   const checkAllCompleted = () => {
     if (tasks.length > 0 && tasks.every((task) => task.completed)) {
-      message.success("Hoàn thành công việc!");
     }
   };
 

@@ -130,7 +130,7 @@ export default function MemberManager() {
         Quản lí Thành viên
       </h1>
 
-      {/* form thêm thành viên */}
+      {/* form thêm */}
       <Form
         form={form}
         layout="inline"
@@ -144,7 +144,7 @@ export default function MemberManager() {
         }}
       >
 
-        {/* tên thành viên */}
+        {/* tên  */}
         <Form.Item
           name="name"
           rules={[{ required: true, message: "Vui lòng nhập tên!" }]}
