@@ -1,0 +1,57 @@
+- Link: điều hướng sang các trang
+NavLink: ...., có hiện active -> cho sidebar, navbar, menu tiêu đề
+
+
+- Outlet
+-> placeholder (chỗ chứa) để hiển thị các Route con (nested routes) bên trong một Route cha.
+-> cho phép tạo layout chung cho nhiều trang
+<-> cả route con và cha sẽ hiện trong cùng 1 trang
+VD: trang layout cha là "đây là trang layout", 
+thì khi truy cập /about có nội dung "đây là trang about" thì nó sẽ hiện 
+ngay bên dưới dòng "đây là trang layout"
+
+=> nằm trong cơ chế: NESTED ROUTES
+-> Cho phép bạn định nghĩa route con bên trong route cha.
+-> Khi truy cập vào route con, React Router sẽ render:
+- Giao diện của route cha
+- Cộng thêm phần nội dung của route con, hiển thị ở vị trí <Outlet /> trong component cha.
+
+
+- useNavigate
+-> Cho phép bạn chuyển trang bằng code
+-> cách dùng cơ bản
+function MyComponent() {
+  const navigate = useNavigate();
+
+  const goHome = () => {
+    navigate("/home");   //trong "" là đg dẫn trang muốn truyền tới
+  };
+
+  return (
+    <button onClick={goHome}>Đi tới Home</button>
+  );
+}
+
+- useParams
+-> Dùng để lấy các tham số động (dynamic params) từ URL.
+-> Trả về một object chứa các cặp key: value của tham số trong URL.
+-> VD:
+function ProductDetail() {
+  const { id } = useParams(); // lấy tham số id từ URL
+  return <h2>Trang chi tiết sản phẩm có ID: {id}</h2>;
+}
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/product/:id" element={<ProductDetail />} />
+      </Routes>
+    </Router>
+  );
+}
+👉 Khi bạn truy cập:
+
+- http://localhost:5173/product/10 → hiển thị Trang chi tiết sản phẩm có ID: 10
+- http://localhost:5173/product/abc → hiển thị Trang chi tiết sản phẩm có ID: abc
+- nếu route pattern là /detail/:id và URL hiện tại là /detail/123, thì useParams() sẽ trả về { id: "123" }. 
+

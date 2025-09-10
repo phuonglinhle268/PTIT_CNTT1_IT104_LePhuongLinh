@@ -13,6 +13,8 @@ export default function ListUser() {
   const handleClick = (id) => {
     navigate(`/userdetail/${id}`);
   };
+  // Hàm handleClick nhận vào id của user.
+  // Khi được gọi, nó điều hướng tới đường dẫn /userdetail/:id.
 
   return (
     <div style={{ display: "flex", gap: "10px", padding: "20px" }}>
