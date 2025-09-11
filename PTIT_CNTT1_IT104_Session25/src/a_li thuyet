@@ -55,3 +55,8 @@ export default function App() {
 - http://localhost:5173/product/abc → hiển thị Trang chi tiết sản phẩm có ID: abc
 - nếu route pattern là /detail/:id và URL hiện tại là /detail/123, thì useParams() sẽ trả về { id: "123" }. 
 
+- index
++ Route index element={}....
++ index được hiểu là route mặc định của một route cha.
++ Khi bạn vào đúng đường dẫn cha (ví dụ /teams) mà không có gì thêm phía sau, thì route có index sẽ hiển thị.
+-> thay thế cho việc viết path="".
