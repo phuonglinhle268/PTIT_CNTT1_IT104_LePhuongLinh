@@ -1,0 +1,76 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Laptop Dell XPS 13",
+      "price": 28000000,
+      "quantity": 10,
+      "description": "Laptop cao cấp dành cho doanh nhân"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15 Pro",
+      "price": 32000000,
+      "quantity": 15,
+      "description": "Điện thoại thông minh cao cấp của Apple"
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S24",
+      "price": 27000000,
+      "quantity": 20,
+      "description": "Flagship mới nhất của Samsung"
+    },
+    {
+      "id": 4,
+      "name": "Tai nghe Sony WH-1000XM5",
+      "price": 9000000,
+      "quantity": 25,
+      "description": "Tai nghe chống ồn tốt nhất thị trường"
+    },
+    {
+      "id": 5,
+      "name": "Bàn phím cơ Keychron K2",
+      "price": 2500000,
+      "quantity": 30,
+      "description": "Bàn phím cơ nhỏ gọn, hỗ trợ Bluetooth"
+    }
+  ],
+  "student": [
+    {
+      "id": 1,
+      "name": "Nguyen Van A",
+      "age": 20,
+      "major": "Công nghệ thông tin",
+      "gpa": 3.5
+    },
+    {
+      "id": 2,
+      "name": "Tran Thi B",
+      "age": 21,
+      "major": "Kinh tế",
+      "gpa": 3.2
+    },
+    {
+      "id": 3,
+      "name": "Le Van C",
+      "age": 22,
+      "major": "Điện tử viễn thông",
+      "gpa": 3.8
+    },
+    {
+      "id": 4,
+      "name": "Pham Thi D",
+      "age": 19,
+      "major": "Quản trị kinh doanh",
+      "gpa": 3.0
+    },
+    {
+      "id": 5,
+      "name": "Hoang Van E",
+      "age": 20,
+      "major": "Thiết kế đồ họa",
+      "gpa": 3.6
+    }
+  ]
+}
