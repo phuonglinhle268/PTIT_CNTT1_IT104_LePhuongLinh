@@ -3,22 +3,17 @@
     {
       "id": 4,
       "title": "hoc bai",
-      "completed": true
+      "completed": false
     },
     {
       "id": 5,
       "title": "giat giu",
-      "completed": true
+      "completed": false
     },
     {
       "title": "nau com",
-      "completed": true,
-      "id": 6
-    },
-    {
-      "title": "ăn",
       "completed": false,
-      "id": 7
+      "id": 6
     }
   ]
 }

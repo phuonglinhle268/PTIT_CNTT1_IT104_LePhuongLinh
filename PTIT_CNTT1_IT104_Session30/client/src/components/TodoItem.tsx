@@ -11,8 +11,6 @@ const TodoItem = ({ todo, onDelete, onToggle, onUpdate }) => {
       setEditError("Tên công việc không được để trống");
       return;
     }
-
-
     onUpdate(todo.id, editInput.trim());
     setShowEditModal(false);
     setEditError("");
