@@ -15,7 +15,6 @@ const PostTable = () => {
       setLoading(true);
       let url = "http://localhost:3000/posts";
       if (keyword.trim()) {
-        // json-server hỗ trợ query _like (tìm gần đúng)
         url += `?title_like=${keyword}`;
       }
       const res = await axios.get(url);
