@@ -7,7 +7,8 @@ import companyReducer from "./company.reducer";
 import themeReducer from "./theme.reducer";
 import authReducer from "./auth.reducer";
 
-// Gộp tất cả các reducer của toàn bộ dự an
+// Gộp tất cả các reducer của toàn bộ d/an
+
 const reducers = combineReducers({
   counter: counterReducer,
   random: randomReducer,
