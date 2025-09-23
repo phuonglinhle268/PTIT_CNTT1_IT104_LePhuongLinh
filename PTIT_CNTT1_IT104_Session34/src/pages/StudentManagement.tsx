@@ -17,7 +17,7 @@ const StudentManagement = () => {
 
   const handleSearch = (keyword: string) => {
     setStudents((prev) =>
-      prev.filter((s) => s.name.toLowerCase().includes(keyword.toLowerCase())),
+      prev.filter((s:Student) => s.name.toLowerCase().includes(keyword.toLowerCase())),
     );
   };
 

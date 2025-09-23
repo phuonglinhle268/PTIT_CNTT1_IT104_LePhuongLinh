@@ -22,7 +22,7 @@ const StudentList: React.FC<StudentListProps> = () => {
 
   // hàm xóa sinh viên
   const handleDelete = (id: string) => {
-  dispatch({type: "DELETE", payload: {id: id}})
+  dispatch({type: "DELETE", payload: id})
   }
 
   

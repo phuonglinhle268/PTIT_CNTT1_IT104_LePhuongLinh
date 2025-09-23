@@ -21,6 +21,7 @@ const StudentForm: React.FC<StudentFormProps> = () => {
   const dispatch = useAppDispatch()
   const [form, setForm] = React.useState<Student>({
     id: "",
+    age: 0,
     name: '',
     gender: 'Nam',
     birthday: '',
@@ -44,6 +45,7 @@ const StudentForm: React.FC<StudentFormProps> = () => {
 
     setForm({
       id: "",
+      age: 0,
       name: '',
       gender: 'Nam',
       birthday: '',
