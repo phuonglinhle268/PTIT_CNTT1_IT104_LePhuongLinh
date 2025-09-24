@@ -5,7 +5,7 @@ interface LanguageState {
 }
 
 const initialState: LanguageState = {
-  currentLang: "vi", // mặc định English
+  currentLang: "vi", 
 };
 
 const languageSlice = createSlice({

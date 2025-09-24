@@ -1,5 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllTask } from "../../apis/task.api";
+import {
+  createTask,
+  deleteTask,
+  getAllTask,
+  updateTask,
+} from "../../apis/task.api";
 import type { InitialStateType } from "../../interfaces/task.interface";
 
 // Khai báo giá trị khởi tạo cho state
@@ -7,13 +12,18 @@ const initialState: InitialStateType = {
   status: "idle",
   data: [],
   error: null,
+  task: null,
 };
 
 // Tạo slice cho task
 const taskSlice = createSlice({
   name: "task",
   initialState,
-  reducers: {},
+  reducers: {
+    getTaskDetail(state, action) {
+      state.task = action.payload;
+    },
+  },
   extraReducers(builder) {
     builder
       .addCase(getAllTask.pending, (state) => {
@@ -27,8 +37,27 @@ const taskSlice = createSlice({
       .addCase(getAllTask.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+      })
+      .addCase(createTask.fulfilled, (state, action) => {
+        // Cập nhật lại state data
+        state.data.push(action.payload); // action.payload là dữ liệu trả về từ hàm createTask trong API
+      })
+      .addCase(deleteTask.fulfilled, (state, action) => {
+        state.data = state.data.filter((task) => task.id !== action.payload);
+      })
+      .addCase(updateTask.fulfilled, (state, action) => {
+        // Gán lại giá trị name cho task cần cập nhật
+        state.data = state.data.map((task) => {
+          if (task.id === action.payload.id) {
+            task.name = action.payload.name;
+          }
+
+          return task;
+        });
       });
   },
 });
 
 export default taskSlice.reducer; // Cần export như thế này thì store mới hiểu đây là 1 reducer
+
+export const { getTaskDetail } = taskSlice.actions;

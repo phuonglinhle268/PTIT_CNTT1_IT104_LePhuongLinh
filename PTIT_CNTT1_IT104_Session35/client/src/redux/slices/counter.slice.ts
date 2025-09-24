@@ -8,7 +8,6 @@ const counterSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
-    // Khai báo các hàm, xử lý tác vụ đồng bộ
     increase(state) {
       state.value += 1;
     },

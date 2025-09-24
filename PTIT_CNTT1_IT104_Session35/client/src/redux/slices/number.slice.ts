@@ -13,9 +13,8 @@ const numberSlice = createSlice({
   initialState,
   reducers: {
     randomNumber(state) {
-      // Sinh 1 số ngẫu nhiên từ 1 -> 10
       const randomNum = Math.floor(Math.random() * 10) + 1;
-      state.list.push(randomNum); // thêm vào mảng
+      state.list.push(randomNum); 
     },
     resetList(state) {
       state.list = [];
