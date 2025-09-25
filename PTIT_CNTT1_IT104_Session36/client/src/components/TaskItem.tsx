@@ -19,8 +19,7 @@ const priorityColor = {
 } as const;
 
 const TaskItem: React.FC<TaskItemProps> = ({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  id,
+  //id,
   title,
   completed,
   priority,

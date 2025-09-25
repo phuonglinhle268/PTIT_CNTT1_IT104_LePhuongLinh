@@ -31,7 +31,7 @@ const taskSlice = createSlice({
       })
       .addCase(getAllTasks.rejected, (state, action) => {
         state.status = 'failed';
-        state.error = action.error.message || 'Lỗi khi lấy danh sách công việc';
+        state.error = action.error.message || 'Không lấy được danh sách';
       })
       .addCase(createTask.fulfilled, (state, action) => {
         state.tasks.push(action.payload);
